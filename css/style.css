@@ -11,12 +11,14 @@ body {
 .footer {
   padding-right: 15px;
   padding-left: 15px;
+  color: grey;
 }
 
 /* Custom page header */
 .header {
   padding-bottom: 20px;
   border-bottom: 1px solid grey;
+  background-color: aqua;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -29,13 +31,14 @@ body {
 .footer {
   padding-top: 19px;
   color: grey;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid grey;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
+    background-color: aqua;
   }
 }
 .container-narrow > hr {
@@ -45,8 +48,9 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid coral;
   background-color: coral;
+  /*color: dark-grey;*/
 }
 .jumbotron .btn {
   padding: 14px 24px;
@@ -79,5 +83,9 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  .well{
+    background-color: coral;
+    /*color: dark-grey;*/
   }
 }
