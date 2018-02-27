@@ -50,6 +50,7 @@ body {
   text-align: center;
   border-bottom: 1px solid coral;
   background-color: coral;
+  color: white;
   /*color: dark-grey;*/
 }
 .jumbotron .btn {
@@ -87,5 +88,6 @@ body {
   .well{
     background-color: coral;
     /*color: dark-grey;*/
+    color: white;
   }
 }
