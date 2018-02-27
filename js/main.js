@@ -79,7 +79,7 @@ function fetchBookmarks(){
   // Build output
   bookmarksResults.innerHTML = '';
   if(bookmarks.length==0){
-    bookmarksResults.innerHTML = '<div class="well">There are no bookmarks yet. Please add some bookmarks.</div>';
+    bookmarksResults.innerHTML = '<div class="well"><h3>There are no bookmarks yet. Please add some bookmarks.</h3></div>';
   }else{
     for(var i = 0; i < bookmarks.length; i++){
       var name = bookmarks[i].name;
