@@ -60,8 +60,10 @@ function deleteBookmark(url){
   // Loop through the bookmarks
   for(var i =0;i < bookmarks.length;i++){
     if(bookmarks[i].url == url){
-      // Remove from array
-      bookmarks.splice(i, 1);
+      //if(bookmarks[i].name ==name){
+        // Remove from array
+        bookmarks.splice(i, 1);
+      //}
     }
   }
   // Re-set back to localStorage
@@ -88,12 +90,15 @@ function fetchBookmarks(){
       var url = bookmarks[i].url;
       var description = bookmarks[i].description;
 
-      bookmarksResults.innerHTML += '<div class="well">'+
-                                  '<h3>'+name+
-                                  ' <a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
-                                  ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
-                                  '</h3><b>Beschreibung:</b> '+description+''+
-                                  '</div>';
+      var ret = '';
+      ret +='<div class="well">'+'<h3>'+name+
+            ' <a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
+            ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> </h3>';
+            if(description.length!=0){
+              ret +='<b>Description:</b> '+description+'';
+            }
+            ret +='</div>';
+      bookmarksResults.innerHTML +=ret;
     }
   }
 }
